@@ -3,7 +3,7 @@
 function Comments({ comment }) {
     // split email to get username
     const firstName = comment.email.split("@")[0];
-    console.log(comment);
+    // console.log(comment);
     return (
         <div className="bg-white dark:bg-[#4b55636a] p-4 rounded-md">
             <div className='grid grid-rows-1 gap-3'>

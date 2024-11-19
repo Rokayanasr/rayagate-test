@@ -50,11 +50,11 @@ function PostDetails({ id }) {
                 </footer>
                 <p className='text-gray-500 text-base dark:text-gray-400'>{post.body}</p>
             </article>
-            <h2 className='lg:ml-28 text-xl mb-4 text-gray-900 font-extrabold dark:text-white bg-white dark:bg-gray-800'>Comments({currentComments.length})</h2>
+            <h2 className='lg:ml-28 text-xl mb-4 text-gray-900 md:text-start text-center font-extrabold dark:text-white bg-white dark:bg-gray-800'>Comments({currentComments.length})</h2>
             <div className='flex flex-col gap-4'>
                 {/* comments */}
                 {currentComments.map((comment) => (
-                    <div className='lg:ml-32 text-base py-2 px-5 rounded-md divide-gray-700 divide-y' key={comment.id}>
+                    <div className='lg:ml-32 text-base py-2 md:px-5 rounded-md divide-gray-700 divide-y' key={comment.id}>
                         <Comments comment={comment}></Comments>
                         <hr className='h-[1.5px] w-full bg-gray-200 dark:bg-gray-700 mt-4'></hr>
                     </div>
