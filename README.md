@@ -43,8 +43,8 @@ To run this project locally, follow these steps:
    
 **Open your browser and visit http://localhost:5173/ to view the app.**
 
-##Future Improvements:
-**Unit Tests:** Implement unit tests using Jest and React Testing Library.
-**Styling Enhancements:** Improve UI/UX design and add interactive elements such as loading spinners or error handling components.
+## Future Improvements:
+- **Unit Tests:** Implement unit tests using Jest and React Testing Library.
+- **Styling Enhancements:** Improve UI/UX design and add interactive elements such as loading spinners or error handling components.
 
 
