@@ -14,7 +14,7 @@ const initialState = {
 export const fetchAllComments = createAsyncThunk("comments/fetchAllComments", async (_, { rejectWithValue }) => {
     try {
         const response = await axios.get(`${BASE_API_URL}comments`);
-        console.log(response.data);
+        // console.log(response.data);
         return response.data;
     } catch (error) {
         return rejectWithValue(error.message);
@@ -36,25 +36,25 @@ const commentsSlice = createSlice({
         },
         setCommentsById(state, { payload }) {
             // if the id cames in the payload == the id of the post returned
-            state.post = state.allComments.filter((comment) => comment.postId == payload);
-            console.log("comments by id" + state.comments);
+            state.comments = state.allComments.filter((comment) => comment.postId == payload);
+            // console.log("comments by id" + state.comments);
         },
     },
     extraReducers: (builder) => {
         builder
             .addCase(fetchAllComments.pending, (state) => {
                 state.loading = true;
-                console.log("Fetching comments...");
+                // console.log("Fetching comments...");
             })
             .addCase(fetchAllComments.fulfilled, (state, { payload }) => {
                 state.loading = false;
                 state.allComments = payload;
-                console.log("comments fetched successfully.");
+                // console.log("comments fetched successfully.");
             })
             .addCase(fetchAllComments.rejected, (state, { payload }) => {
                 state.loading = false;
                 state.error = payload || "Something went wrong.";
-                console.log("Failed to fetch comments:", state.error);
+                // console.log("Failed to fetch comments:", state.error);
             });
     },
 });
